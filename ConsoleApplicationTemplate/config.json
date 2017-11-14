@@ -1,0 +1,17 @@
+{
+  "General_Settings": {
+    "ApplicationName": "ConsoleApplicationTemplate",
+    "Environment": "Development",
+    "JsonSettingsVersion": "1.0.0"
+  },
+
+  "Test1_Settings": {
+    "Test1a": "test1a_setting",
+    "Test1b": "test1b_setting",
+    "Test1c": "test1c_setting"
+  },
+  "Test2_Settings": {
+    "Test2a": "test2a_setting",
+    "Test2b": "test2b_setting"
+  }
+}
