@@ -15,10 +15,10 @@ namespace ConsoleApplicationTemplate.Infrastructure.DI
 
             builder.RegisterType<IResolver>().As<IStartable>().SingleInstance();
 
+            //configuration
             builder.RegisterType<MappingConfiguration>().As<IMappingConfiguration>().SingleInstance();
-            builder.RegisterType<ApplicationSettings>().SingleInstance();            
+            builder.RegisterType<ApplicationSettings>().SingleInstance();
             builder.RegisterType<SettingsConfiguration>().As<ISettingsConfiguration>().SingleInstance();
-
 
             //strategies
             builder.RegisterType<TestDataStrategy>().As<ITestDataStrategy>().InstancePerDependency();
@@ -27,17 +27,15 @@ namespace ConsoleApplicationTemplate.Infrastructure.DI
 
             //workers
             builder.RegisterType<FirstWorker>().As<IFirstWorker>().InstancePerDependency();
-            
+
             //context            
             builder.RegisterType<TestDataContext>().InstancePerDependency();
-
 
             //repositories
             //builder.RegisterType<TestRepository>().As<ITestRepository>().InstancePerDependency();            
 
             return builder.Build();
         }
-
     }
 
 }

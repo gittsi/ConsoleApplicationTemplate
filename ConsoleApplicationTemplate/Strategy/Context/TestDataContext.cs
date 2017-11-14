@@ -12,12 +12,10 @@ namespace ConsoleApplicationTemplate.Strategy
         {
             this._TestDataStrategy = testDataStrategy;
         }
-
         public string GetStrategy()
         {
             return this._TestDataStrategy.Strategy();
         }
-
         public List<TestData> GetData()
         {
             if (_TestDataStrategy is null)
@@ -26,6 +24,6 @@ namespace ConsoleApplicationTemplate.Strategy
             }
 
             return this._TestDataStrategy.GetData();
-        }       
+        }
     }
 }

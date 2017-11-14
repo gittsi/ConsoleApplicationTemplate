@@ -14,7 +14,6 @@ namespace ConsoleApplicationTemplate.Infrastructure.Mapping
         {
             _Mapper = GetConfigureMapper();
         }
-
         public IMapper GetConfigureMapper()
         {
             if (_Mapper != null)
@@ -29,18 +28,6 @@ namespace ConsoleApplicationTemplate.Infrastructure.Mapping
                     .ForMember(dest => dest.StringData, src => src.MapFrom(source => source._StringData))
                     .ForMember(dest => dest.StringsData, src => src.MapFrom(source => source._StringsData))
                     ;
-                    //;
-
-                    //cfg.CreateMap<GuildCharacterDto, Model.Character>()
-                    //.ForMember(dest => dest.Name, src => src.MapFrom(source => source.Name))
-                    //.ForMember(dest => dest.Stats, src => src.Ignore())
-                    //;
-
-                    ////.ForMember(dest => dest.Tax, c => c.MapFrom(src => !string.IsNullOrWhiteSpace(src.TaxCode) ? new TaxInfo() { TaxCode = src.TaxCode, TaxOffice = src.TaxOffice } : null))
-
-                    //cfg.CreateMap<GuildCharacterDto, Model.GuildCharacter>()
-                    //.ForMember(dest => dest.Character, src => src.MapFrom(source => new Model.Character() { Name = source.Name })
-                    //);
 
                     cfg.AllowNullDestinationValues = true;
                     cfg.AllowNullCollections = true;

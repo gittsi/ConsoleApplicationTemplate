@@ -20,7 +20,7 @@ namespace ConsoleApplicationTemplate.Infrastructure.Configuration
 
             ApplicationSettingsModel appSettings = new ApplicationSettingsModel
             {
-            //general settings
+                //general settings
                 GeneralSettings = new GeneralSettings()
                 {
                     ApplicationName = _SettingsConfigurationRoot.GetSection("General_Settings")["ApplicationName"]
@@ -33,9 +33,9 @@ namespace ConsoleApplicationTemplate.Infrastructure.Configuration
                 //test1 settings
                 Test1Settings = new Test1Settings()
                 {
-                     Test1a= _SettingsConfigurationRoot.GetSection("Test1_Settings")["Test1a"]
+                    Test1a = _SettingsConfigurationRoot.GetSection("Test1_Settings")["Test1a"]
                      ,
-                     Test1b = _SettingsConfigurationRoot.GetSection("Test1_Settings")["Test1b"]
+                    Test1b = _SettingsConfigurationRoot.GetSection("Test1_Settings")["Test1b"]
                      ,
                     Test1c = _SettingsConfigurationRoot.GetSection("Test1_Settings")["Test1c"]
                     ,
@@ -44,16 +44,15 @@ namespace ConsoleApplicationTemplate.Infrastructure.Configuration
                 //test2 settings
                 Test2Settings = new Test2Settings()
                 {
-                    Test2a=_SettingsConfigurationRoot.GetSection("Test2_Settings")["Test2a"]
+                    Test2a = _SettingsConfigurationRoot.GetSection("Test2_Settings")["Test2a"]
                     ,
-                    Test2b= _SettingsConfigurationRoot.GetSection("Test2_Settings")["Test2b"]
+                    Test2b = _SettingsConfigurationRoot.GetSection("Test2_Settings")["Test2b"]
                     ,
                     Test2c = _SettingsConfigurationRoot.GetSection("Test2_Settings")["Test2c"]
                     ,
                     RecurAfterMs = Recur2_ms
                 }
             };
-
             return appSettings;
         }
     }

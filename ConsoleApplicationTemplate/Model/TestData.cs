@@ -9,6 +9,6 @@ namespace ConsoleApplicationTemplate.Model
         public int Id { get; set; }
         public bool BoolData { get; set; }
         public string StringData { get; set; }
-        public List<string> StringsData { get; set; }        
+        public List<string> StringsData { get; set; }
     }
 }

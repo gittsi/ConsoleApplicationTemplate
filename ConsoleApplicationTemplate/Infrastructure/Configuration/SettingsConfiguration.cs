@@ -13,7 +13,6 @@ namespace ConsoleApplicationTemplate.Infrastructure.Configuration
         {
             Configuration = GetConfiguration();
         }
-
         public IConfigurationRoot GetConfiguration()
         {
             var builder = new ConfigurationBuilder()
@@ -23,7 +22,6 @@ namespace ConsoleApplicationTemplate.Infrastructure.Configuration
             Configuration = builder.Build();
 
             return Configuration;
-        }       
+        }
     }
-
 }

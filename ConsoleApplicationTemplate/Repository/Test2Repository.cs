@@ -16,19 +16,14 @@ namespace ConsoleApplicationTemplate.Repository
         {
             _Mapper = mappingConfiguration.GetConfigureMapper();
         }
-
         public async Task<List<TestData>> GetTestData()
         {
             await Task.FromResult(1);
 
             var list = GetTestDtoData().Result;
-
             var newList = _Mapper.Map<List<TestData>>(list);
-
             return newList;
-
         }
-
         private async Task<List<TestDataDto>> GetTestDtoData()
         {
             await Task.FromResult(1);
