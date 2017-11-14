@@ -15,6 +15,6 @@
     "Test2a": "test2a_setting",
     "Test2b": "test2b_setting",
     "Test2c": "test2c_setting",
-    "RecurAfterMs": "2300"
+    "RecurAfterMs": "2200"
   }
 }
