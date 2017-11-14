@@ -8,7 +8,6 @@ namespace ConsoleApplicationTemplate.Infrastructure.Configuration
     {
         public GeneralSettings GeneralSettings { get; set; }
         public Test1Settings Test1Settings { get; set; }
-
         public Test2Settings Test2Settings { get; set; }
     }
 
@@ -24,11 +23,15 @@ namespace ConsoleApplicationTemplate.Infrastructure.Configuration
         public string Test1a { get; set; }
         public string Test1b { get; set; }
         public string Test1c { get; set; }
+
+        public int RecurAfterMs { get; set; }
     }
 
     public class Test2Settings
     {
         public string Test2a { get; set; }
         public string Test2b { get; set; }
+        public string Test2c { get; set; }
+        public int RecurAfterMs { get; set; }
     }
 }

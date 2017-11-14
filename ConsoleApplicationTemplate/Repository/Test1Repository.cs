@@ -4,18 +4,29 @@ using System.Text;
 using ConsoleApplicationTemplate.Model;
 using ConsoleApplicationTemplate.Repository.Dto;
 using System.Threading.Tasks;
+using ConsoleApplicationTemplate.Infrastructure.Mapping;
+using AutoMapper;
 
 namespace ConsoleApplicationTemplate.Repository
 {
     public class Test1Repository : ITest1Repository
     {
+        private IMapper _Mapper;
+        public Test1Repository(IMappingConfiguration mappingConfiguration)
+        {
+            _Mapper = mappingConfiguration.GetConfigureMapper();
+        }
+
         public async Task<List<TestData>> GetTestData()
         {
             await Task.FromResult(1);
 
             var list = GetTestDtoData().Result;
 
-            return null;
+            var newList =  _Mapper.Map<List<TestData>>(list);
+
+            return newList;
+            
         }
 
         private async Task<List<TestDataDto>> GetTestDtoData()

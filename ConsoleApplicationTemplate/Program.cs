@@ -2,6 +2,7 @@
 using ConsoleApplicationTemplate.Infrastructure.Configuration;
 using ConsoleApplicationTemplate.Infrastructure.DI;
 using ConsoleApplicationTemplate.Infrastructure.Mapping;
+using ConsoleApplicationTemplate.Workers;
 using System;
 using System.Threading.Tasks;
 
@@ -11,6 +12,7 @@ namespace ConsoleApplicationTemplate
     {
         static Autofac.IContainer autoFacContainer = null;
         private ApplicationSettings applicationSettings;
+        static IFirstWorker firstWorker= null;
 
         static void Main(string[] args)
             => new Program().MainAsync().GetAwaiter().GetResult();
@@ -21,9 +23,13 @@ namespace ConsoleApplicationTemplate
             {
                 applicationSettings = scope.Resolve<ApplicationSettings>();
                 scope.Resolve<IMappingConfiguration>();
-            }
+                firstWorker = scope.Resolve<IFirstWorker>();
 
-            Helper.Logo.ConsolePrintLogo(applicationSettings);
+                Helper.Logo.ConsolePrintLogo(applicationSettings);
+
+                firstWorker.Run1();
+                firstWorker.Run2();
+            }           
 
             await Task.Delay(-1);
         }
