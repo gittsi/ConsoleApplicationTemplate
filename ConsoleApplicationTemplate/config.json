@@ -9,7 +9,7 @@
     "Test1a": "test1a_setting",
     "Test1b": "test1b_setting",
     "Test1c": "test1c_setting",
-    "RecurAfterMs": "2000"
+    "RecurAfterMs": "2100"
   },
   "Test2_Settings": {
     "Test2a": "test2a_setting",
